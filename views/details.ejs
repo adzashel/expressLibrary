@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <% if (!book) { %>
+           <div class="alert alert-danger">
+             No details available. Please try again later.
+           </div>
+        <% } %>
+        <div class="col-md-8 mt-3">
+            <h1>Books Detail</h1>
+            <div class="d-flex">
+                <img src=<%= book.image %> alt="books Title" class="me-5 img" >
+                <div class="book-info">
+                <p> <strong><%= book.authors %></strong></p>
+                <h3><%= book.title %></h3>
+                <p>Year : <%= book.year %></p>
+                <strong >Book Format</strong>
+                <div class="file mt-2">
+                    <p ><i class="bi bi-journal-richtext"></i> PDF file</p>
+            </div>
+            <br>
+            <div class="book-description mt-3">
+                    <h3>Description</h3>
+                    <p><%= book.description %></p>
+                </div>
+        </div>
+    
+        </div>
+    </div>
+</div>

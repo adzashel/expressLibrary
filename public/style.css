@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  font-family: "Urbanist" , sans-serif;
+}
+
+body {
+  background-color: var(--background) !important;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  margin: 3rem 4rem;
+  display: block;
+}
+
+.books-container{
+    display: grid !important;
+    grid-template-columns:  repeat(5, 250px );
+    gap: 5rem;
+}
+
+.card {
+    margin-right: 3rem;
+}
+
+
+.file {
+    border: 1px solid #000 !important;
+    border-radius: 2rem;
+    width: 120px;
+    height: 30px;
+    background-color: 	#A9A9A9;
+}
+
+.file p {
+    text-align: center;
+}
+.file:hover {
+    background-color: #D3D3D3;
+    cursor: pointer;
+}
+
+
+/* 404 page */
+

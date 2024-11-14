@@ -1,0 +1,12 @@
+<div class="books-container">
+  <% data.books.forEach(item => { %>
+  <div class="card" style="width: 18rem">
+    <img src="<%= item.image %>" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title"><%= item.title %></h5>
+      <p class="card-text"><%= item.authors %></p>
+      <a href="/books/<%= item.id %>" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <% }) %>
+</div>
