@@ -20,4 +20,12 @@ const getDetailBook = async (id) => {
 }
 
 
-module.exports = { getData, getDetailBook };
+// search books
+const searchBook = async (id) => {
+    const data = await fetch(searchUrl + id);
+    const jsonData = await data.json();
+    console.log(jsonData);
+    return jsonData;
+}
+
+module.exports = { getData, getDetailBook , searchBook };

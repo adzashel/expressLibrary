@@ -1,13 +1,13 @@
-<div class="container">
+<div class="container-detail">
     <div class="row">
         <% if (!book) { %>
            <div class="alert alert-danger">
              No details available. Please try again later.
            </div>
         <% } %>
-        <div class="col-md-8 mt-3">
-            <h1>Books Detail</h1>
-            <div class="d-flex">
+        <div class="col-lg-12 col-md-6 mt-3">
+            <p><a class="route" href="/" >&laquo; Home</a></p>
+            <div class="d-flex mt-3">
                 <img src=<%= book.image %> alt="books Title" class="me-5 img" >
                 <div class="book-info">
                 <p> <strong><%= book.authors %></strong></p>
@@ -15,15 +15,31 @@
                 <p>Year : <%= book.year %></p>
                 <strong >Book Format</strong>
                 <div class="file mt-2">
-                    <p ><i class="bi bi-journal-richtext"></i> PDF file</p>
+                    <a href="<%= book.download %>" download="file-pdf" class="download"><p ><i class="bi bi-journal-richtext"></i> PDF file</p></a>
             </div>
             <br>
             <div class="book-description mt-3">
-                    <h3>Description</h3>
+                    <h5>Description</h5>
                     <p><%= book.description %></p>
                 </div>
+            <div class="detail-info">
+                <h5>Book Detail</h5>
+                <div class="detail-items">
+                    <div>
+                        <p class="parent">Publisher</p>
+                        <p class="child"><i class="bi bi-calendar"></i> <%= book.publisher %></p>
+                    </div>
+                    <div>
+                        <p class="parent">Pages</p>
+                        <p class="child"><i class="bi bi-book-fill"></i> <%= book.pages %> pages</p>
+                    </div>
+                    <div>
+                        <p class="parent">Year</p>
+                        <p class="child"><i class="bi bi-ruler"></i> <%= book.year %> </p>
+                    </div>
+                </div>
+            </div>
         </div>
-    
         </div>
     </div>
 </div>

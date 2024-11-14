@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
-  font-family: "Urbanist" , sans-serif;
+  font-family: "Urbanist" , sans-serif , "Mona Sans" ;
 }
 
 body {
   background-color: var(--background) !important;
   overflow-x: hidden;
 }
+
+
 
 .wrapper {
   margin: 3rem 4rem;
@@ -23,6 +25,12 @@ body {
     grid-template-columns:  repeat(5, 250px );
     gap: 5rem;
 }
+
+.books-container img {
+  height: 400px
+}
+
+
 
 .card {
     margin-right: 3rem;
@@ -45,6 +53,43 @@ body {
     cursor: pointer;
 }
 
+.book-description {
+  width: 450px;
+}
 
-/* 404 page */
+.container-detail {
+  margin: 3rem 5rem;
+}
+
+.container-detail > p > .route {
+  color: #A9A9A9 !important;
+  text-decoration: none;
+}
+
+.container-detail img {
+  margin-right: 5rem;
+  height: 400px;
+}
+
+.book-info {
+  margin-left: 3rem;
+}
+
+.detail-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.child {
+  margin-top: -12px;
+}
+
+.download {
+  color: #000;
+  text-decoration: none;
+}
+
+.parent {
+  color: #858080;
+}
 

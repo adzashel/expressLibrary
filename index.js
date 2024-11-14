@@ -1,10 +1,9 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const { getData , getDetailBook } = require('./partials/script')
+const { getData , getDetailBook , searchBook } = require('./partials/script')
 const port = 3000;
 const expressLayouts = require('express-ejs-layouts');
-
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
 app.use(express.static(path.join(__dirname, 'public'))); 
@@ -24,7 +23,6 @@ app.get('/books/:id', async (req, res) => {
   const bookId = req.params.id;
   try {
     const bookDetails = await getDetailBook(bookId);
-
     if (bookDetails) {
       res.render('details', {
         layout : 'utilities/container',
@@ -46,6 +44,22 @@ app.get('/books/:id', async (req, res) => {
 
 // middleware for searching book 
 
+app.get('/search', async(req, res) => {
+  const query = req.query.query;
+  try {
+    const data = await searchBook(query);
+    if (data) {
+      res.send("OK");
+    }
+  }catch(err) {
+    console.error('Error searching books:', error);
+    res.status(500).render('utilities/404' , {
+      layout : 'utilities/error',
+      title: 'Error',
+      message: 'An error occurred while searching for books.'
+    });
+  }
+})
 
 
 app.listen(port, () => {
