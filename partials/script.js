@@ -24,8 +24,9 @@ const getDetailBook = async (id) => {
 const searchBook = async (id) => {
     const data = await fetch(searchUrl + id);
     const jsonData = await data.json();
-    console.log(jsonData);
     return jsonData;
 }
 
-module.exports = { getData, getDetailBook , searchBook };
+
+
+module.exports = { getData, getDetailBook, searchBook };

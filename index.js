@@ -4,8 +4,8 @@ const app = express();
 const { getData , getDetailBook , searchBook } = require('./partials/script')
 const port = 3000;
 const expressLayouts = require('express-ejs-layouts');
-app.set('view engine', 'ejs');
-app.use(expressLayouts);
+const { title } = require('process');
+app.set('view engine', 'ejs');app.use(expressLayouts);
 app.use(express.static(path.join(__dirname, 'public'))); 
 
 app.get('/', async (req, res) => {
@@ -43,13 +43,16 @@ app.get('/books/:id', async (req, res) => {
 });
 
 // middleware for searching book 
-
 app.get('/search', async(req, res) => {
   const query = req.query.query;
   try {
     const data = await searchBook(query);
     if (data) {
-      res.send("OK");
+      res.render('search', {
+        layout : 'utilities/container',
+        title : "search books",
+        data,
+      })
     }
   }catch(err) {
     console.error('Error searching books:', error);
