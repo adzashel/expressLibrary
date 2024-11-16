@@ -4,7 +4,6 @@ const app = express();
 const { getData , getDetailBook , searchBook } = require('./partials/script')
 const port = 3000;
 const expressLayouts = require('express-ejs-layouts');
-const { title } = require('process');
 app.set('view engine', 'ejs');app.use(expressLayouts);
 app.use(express.static(path.join(__dirname, 'public'))); 
 
@@ -52,6 +51,7 @@ app.get('/search', async(req, res) => {
         layout : 'utilities/container',
         title : "search books",
         data,
+        query,
       })
     }
   }catch(err) {

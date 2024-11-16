@@ -21,9 +21,10 @@ const getDetailBook = async (id) => {
 
 
 // search books
-const searchBook = async (id) => {
-    const data = await fetch(searchUrl + id);
+const searchBook = async (query) => {
+    const data = await fetch(searchUrl + query);
     const jsonData = await data.json();
+    console.log(jsonData)
     return jsonData;
 }
 

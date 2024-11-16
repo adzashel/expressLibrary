@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="/">Library</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -36,7 +36,7 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex" method="get" action="/search">
+      <form class="d-flex me-2" method="get" action="/search">
         <input
           class="form-control me-2"
           type="search"
@@ -44,8 +44,16 @@
           name="query"
           aria-label="Search"
         />
-        <button class="btn btn-outline-success search-btn" type="search">Search</button>
+        <button class="btn btn-outline-success search-btn" type="search">
+          Search
+        </button>
       </form>
-    </div>
+    </div> 
+    <label class="ui-switch">
+      <input type="checkbox" />
+      <div class="slider">
+        <div class="circle"></div>
+      </div>
+    </label>
   </div>
 </nav>
