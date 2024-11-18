@@ -1,26 +1,32 @@
-<h3 class="total-buku">Menampilkan <%- data.total %> Buku hasil pencarian untuk  <span>"<%= query %>"</span></h3>
-    <div class="books-container">
-        <% data.books.forEach(item => { %>
-        <div class="cards">
-          <div class="tools">
-            <div class="circle">
-              <span class="red box"></span>
-            </div>
-            <div class="circle">
-              <span class="yellow box"></span>
-            </div>
-            <div class="circle">
-              <span class="green box"></span>
-            </div>
-          </div>
-          <div class="card__content">
-           <a href="/books/<%= item.id %>"> <img src="<%= item.image %>" class="card-img-top" alt="..." /></a>
-              <h5 class="card-title mt-2"><%= item.title %></h5>
-              <p class="card-text"><%= item.authors %></p>
-              <a href="/books/<%= item.id %>" class="btn btn-primary ms-2">Detail</a>
-            </div>
-          </div>
-          <% }) %>
-        </div>
+<h3 class="total-buku">
+  Menampilkan <%- data.total %> Buku hasil pencarian untuk
+  <span>"<%= query %>"</span>
+</h3>
+<div class="books-container">
+  <% if (data.status == "not found") { %>
+  <h1>404</h1>
+  <% } else { %> <% data.books.forEach(itemcls
+   => { %>
+  <div class="cards">
+    <div class="tools">
+      <div class="circle">
+        <span class="red box"></span>
       </div>
-  
+      <div class="circle">
+        <span class="yellow box"></span>
+      </div>
+      <div class="circle">
+        <span class="green box"></span>
+      </div>
+    </div>
+    <div class="card__content">
+      <a href="/books/<%= item.id %>">
+        <img src="<%= item.image %>" class="card-img-top" alt="..."
+      /></a>
+      <h5 class="card-title mt-2"><%= item.title %></h5>
+      <p class="card-text"><%= item.authors %></p>
+      <a href="/books/<%= item.id %>" class="btn btn-primary ms-2">Detail</a>
+    </div>
+  </div>
+  <% }) %> <% } %>
+</div>
