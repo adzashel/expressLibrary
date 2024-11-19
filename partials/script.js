@@ -24,7 +24,6 @@ const getDetailBook = async (id) => {
 const searchBook = async (query) => {
     const data = await fetch(searchUrl + query);
     const jsonData = await data.json();
-    console.log(jsonData)
     return jsonData;
 }
 

@@ -46,8 +46,8 @@ body {
 
 .books-container{
     display: grid !important;
-    grid-template-columns:  repeat(5, 250px ) !important;
-    gap: 5rem;
+    grid-template-columns:  repeat(6, 250px ) !important;
+    gap: 3rem;
 }
 
 
