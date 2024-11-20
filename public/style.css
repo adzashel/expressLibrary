@@ -8,6 +8,18 @@
   font-family: "Urbanist" , sans-serif , "Mona Sans" ;
 }
 
+:root {
+  --primary-color: #333;
+  --secondary-color: #f0f0f0;
+  --background-color: #fff;
+  --text-color: #333;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: black
+}
+
 .total-buku {
   font-weight: 300;
   font-size: 1rem;
@@ -251,7 +263,35 @@ body {
  .green {
   background-color: #00ca4e;
  }
- 
+
+
+.error {
+  margin: 3rem auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-header {
+  font-size: 100px;
+  color: #333;
+}
+
+.p {
+  font-size: 24px;
+  color: #666;
+}
+
+.error a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
 
 
  /* media query for laptop */
@@ -262,6 +302,19 @@ body {
 
   .book-description p {
     width: 300px;
+    text-align: justify;
+  }
+}
+
+ /* media query for tablet */
+ @media only screen and (max-width: 1280px) {
+  .books-container {
+    grid-template-columns: repeat(5, 150px )!important;
+    gap: 5rem;
+  }
+
+  .book-description p {
+    width: 250px;
     text-align: justify;
   }
 }
