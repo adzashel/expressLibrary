@@ -9,7 +9,7 @@
 }
 
 :root {
-  --primary-color: #333;
+  --primary-color: #212529;
   --secondary-color: #f0f0f0;
   --background-color: #fff;
   --text-color: #333;
@@ -20,6 +20,9 @@
   background-color: black
 }
 
+.container-detail {
+  color: var(--secondary-color);
+}
 .total-buku {
   font-weight: 300;
   font-size: 1rem;
@@ -31,7 +34,7 @@
 }
 
 body {
-  background-color: var(--background) !important;
+  background-color: var(--primary-color) !important;
   overflow-x: hidden;
 }
 
@@ -224,7 +227,7 @@ body {
   width: 200px;
   height: 450px;
   margin: 0 auto;
-  background-color: #F8FBFE;
+  background-color: var(--primary-color);
   border-radius: 8px;
   z-index: 1;
  }
@@ -291,6 +294,14 @@ body {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
+}
+
+.form-control {
+  background-color: #000;
+}
+
+.card__content h5 , .card__content p {
+  color: #fff;
 }
 
 
