@@ -1,4 +1,3 @@
-// dark mode 
 const darkMode = () => {
     const body = document.body;
     body.classList.toggle('dark-mode');
@@ -11,3 +10,4 @@ const toggle = document.getElementById('toggle');
 // add event listener
 
 toggle.addEventListener('click', darkMode);
+

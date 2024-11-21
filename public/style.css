@@ -8,17 +8,30 @@
   font-family: "Urbanist" , sans-serif , "Mona Sans" ;
 }
 
+#body {
+  background-color: var(--primary-color);
+}
+
 :root {
-  --primary-color: #212529;
+  --primary-color: #fff;
   --secondary-color: #f0f0f0;
-  --background-color: #fff;
+  --card-color : #ebebeb;
   --text-color: #333;
 }
 
+.dark-mode {
+  --primary-color: #212529;
+  --secondary-color: #f0f0f0;
+  --card-color : #242529;
+  --text-color: #f0f0f0;
+}
+
+
 
 .container-detail {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
+
 .total-buku {
   font-weight: 300;
   font-size: 1rem;
@@ -55,7 +68,6 @@
     grid-template-columns:  repeat(6, 250px ) !important;
     gap: 3rem;
 }
-
 
 .cards-body {
   display: flex;
@@ -240,7 +252,7 @@
   width: 200px;
   height: 450px;
   margin: 0 auto;
-  background-color: var(--primary-color);
+  background-color: var(--card-color);
   border-radius: 8px;
   z-index: 1;
  }
@@ -314,14 +326,10 @@
 }
 
 .card__content h5 , .card__content p {
-  color: #fff;
+  color: var(--text-color);
 }
 
-.dark-mode {
-  background-color: #000;
-  color:#f0f0f0;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
+
 
 
  /* media query for laptop */
