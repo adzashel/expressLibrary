@@ -24,4 +24,7 @@ const searchBook = async (query) => {
   return jsonData;
 };
 
+// dark mode
+
+
 module.exports = { getData, getDetailBook, searchBook };

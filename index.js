@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const { getData, getDetailBook, searchBook } = require("./partials/script");
+const { getData, getDetailBook, searchBook, darkMode } = require("./partials/script");
 const port = 3000;
 const expressLayouts = require("express-ejs-layouts");
 app.set("view engine", "ejs");
