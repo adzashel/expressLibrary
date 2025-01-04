@@ -41,6 +41,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   box-shadow: #000;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  margin-left: 3rem;
 }
 
 .logo a {
